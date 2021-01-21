@@ -4,6 +4,7 @@ import { AddressInfo } from "net";
 import { putStudent } from './endpoints/putStudent';
 import { putTeacher } from './endpoints/putTeacher';
 import { putMission } from './endpoints/putMission';
+import { putTeacherClassRelation } from './endpoints/putTeacherClassRelation'
 
 
 
@@ -13,10 +14,9 @@ app.use(express.json());
 app.use(cors());
 
 app.put('/student/create', putStudent)
-
 app.put('/teacher/create', putTeacher)
-
 app.put('/mission/create', putMission)
+app.put("/class/relation", putTeacherClassRelation)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
