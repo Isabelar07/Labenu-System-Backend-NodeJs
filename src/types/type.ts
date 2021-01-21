@@ -13,3 +13,11 @@ export type teacher = {
     birthdate: Date,
     mission_id:number
 }
+
+export type mission = {
+    id: number,
+    name: string,
+    start_date: Date,
+    end_date: Date,
+    module: number
+}
