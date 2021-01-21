@@ -2,6 +2,8 @@ import express, {Express} from 'express';
 import cors from 'cors';
 import { AddressInfo } from "net";
 import { putStudent } from './endpoints/putStudent';
+import { putTeacher } from './endpoints/putTeacher';
+
 
 
 const app: Express = express();
@@ -10,6 +12,8 @@ app.use(express.json());
 app.use(cors());
 
 app.put('/student/create', putStudent)
+
+app.put('/teacher/create', putTeacher)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
