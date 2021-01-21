@@ -8,14 +8,12 @@ export const getStudentAge = async(req: Request, res: Response): Promise<void> =
         const id: number = Number(req.params.id)
         
         if(!id ){
-            throw new Error("Informe o id por query")
+            throw new Error("Informe o id por params")
         }
         
-        const feed: any = await searchStudentAge(
-            id            
-        )
-        
-        res.status(200).send({message:"Sucesso", feed})
+        const students: any = await searchStudentAge(id)
+
+        res.status(200).send({message:"Idade do estudante", students})
 
     } catch(error) {
         console.log(error)
