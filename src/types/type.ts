@@ -1,8 +1,7 @@
 export type student = {
-    id: number,
-    name: string,
-    email: string,
-    birthDateSql: Date,
-    mission_id: number
+    id:number,
+    name:string,
+    email:string,
+    birthdate: Date,
+    mission_id:number
 }
-
