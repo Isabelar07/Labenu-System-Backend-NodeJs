@@ -6,8 +6,8 @@ export const putTeacher = async(req: Request, res: Response): Promise<void> => {
 
     try {
 
-        const [dia,mes,ano] = req.body.birthdate.split("/")        
-        const newDate: Date = new Date(`${ano}-${mes}-${dia}`)
+        const [day,month,year] = req.body.birthdate.split("/")        
+        const newDate: Date = new Date(`${year}-${month}-${day}`)
         
         const {id,name,email,mission_id} =  req.body as teacher
         if(!id || !name || !email || !newDate || !mission_id){
